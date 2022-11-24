@@ -5,7 +5,7 @@ var permitirValorNull = string.Empty;
 var mensaje = temperatura switch
 {
     37 => "No tienes ninguna condicion",
-    > 37 and <  39  => "Tienes fiebre",
+    > 37 and < 39 => "Tienes fiebre",
     >= 39 and < 43 => "Debes ir al medico",
     < 37 => "Puede que tengas baja la azucar",
     _ => throw new ApplicationException("Temperatura Incorrecta")
@@ -15,7 +15,7 @@ Console.WriteLine(mensaje);
 
 //utilizando or
 
-var dia  = DateTime.Now;
+var dia = DateTime.Now;
 
 var estacion = dia.Month switch
 {
@@ -27,3 +27,11 @@ var estacion = dia.Month switch
 };
 
 Console.WriteLine(estacion);
+
+
+
+var nombre = "Jose Toyos";
+foreach (var nombreA in nombre) 
+{
+    Console.WriteLine(nombreA);
+}

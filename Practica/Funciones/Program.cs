@@ -1,6 +1,9 @@
 ﻿//Funciones Simples
 using Funciones;
 
+//Variables  necesarias
+int numero1 = 30;
+
 string NombreCompleto() 
 {
     return "Marcos Diaz";
@@ -93,5 +96,25 @@ void InfoDelAno (Enum tipo, params int[] datos)
 
 }
 
-InfoDelAno(TypeInfoDelAno.Estaciones, 2, 3, 7, 2);
+//InfoDelAno(TypeInfoDelAno.Estaciones, 2, 3, 7, 2);
 //InfoDelAno(TypeInfoDelAno.Dia,new int[] { 2, 3, 7, 2 });
+
+void PasandoTiposDeDatos( int n) 
+{
+    n *= 2;
+    Console.WriteLine(n);
+}
+
+void PasandoTiposDeDatosRef(ref int n)
+{
+    n *= 2;    
+    Console.WriteLine(n);
+}
+
+Console.WriteLine(numero1);
+PasandoTiposDeDatos(numero1);
+Console.WriteLine(numero1);
+Console.WriteLine("--------------------------------------------------------");
+Console.WriteLine(numero1);
+PasandoTiposDeDatosRef(ref numero1);
+Console.WriteLine(numero1); 
